@@ -1,0 +1,11 @@
+name: Testar Secret
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar secret
+        run: echo "Meu secret é: ${{ secrets.NOME_DO_SECRET }}"
